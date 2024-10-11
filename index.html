@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noppapeli</title>
+    <link rel="stylesheet" href="tyyli.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+    </style>
+
+
+</head>
+
+<body>
+    
+    <h1>Sika Noppapeli</h1>
+
+    <div class="pelaajat">
+        <label for="pelaajienmaara">Montako pelaajaa?</label><br><br>
+        <input type="number" id="pelaajienmaara" min="2" max="6" value="2">
+        <button onclick="maara()">Jatka</button><br><br>
+
+        <div id="pelaajiennimet"></div>
+        <button id="kaynnistapeli" onclick="kaynnistaPeli()" style="display: none;">Aloita peli</button>
+    </div> 
+
+    <img id="possu" src="img/possu.png" alt="noppa">
+    <img id="nopat" src="img/kaksinoppaa.png" alt="">
+
+    <div id="aktiivinenpelaaja"></div>
+
+    <div id="noppakuvat"></div>
+
+
+    <div class="nappulat" id="nappulat">
+        <button onclick="heitaNoppa()">Heitä noppa</button>
+        <button onclick="pidaPisteet()">Pidä pisteet</button>
+    </div>
+    <div id="tulosviesti"></div>
+    <div id="tulos"></div>
+ 
+
+    <script src="main.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,120 @@
+body {
+    background-color: #adb6a1 ;
+}
+
+h1 {
+    text-align: center;
+    font-size: 90px;
+    font-family: "Unkempt";
+    color: #172901;
+}
+
+.pelaajat {
+    font-size: 30px;
+    font-family: "Karla";
+    color: #172901;
+    text-align: center;
+
+}
+
+#pelaajienmaara {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 4px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.nappulat {
+    text-align: center;
+    font-family: "Karla";
+    font-size: 30px;
+    color: #172901;
+    display: none;
+}
+
+button {
+    background-color: white;
+    border-radius: 4px;
+    border: none;
+    font-size: 25px;
+    width: 250px;
+    height: 60px;
+
+}
+
+button#kaynnistapeli {
+    margin: 0 auto;
+    margin-top: 2%;
+
+}
+
+.pelaajan-nimi-kentta {
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    text-align: center;
+    margin: 4px;
+
+}
+
+#possu {
+    width: 20%;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+#nopat {
+   width: 15%; 
+   left: 20px;
+   top: 20px;
+   position: fixed;
+}
+
+#aktiivinenpelaaja {
+    font-size: 35px;
+    font-family: "Karla";
+    text-align: center;
+    color: #172901;
+    margin-bottom: 2%;
+}
+
+#tulos {
+    font-size: 35px;
+    font-family: "Karla";
+    text-align: center;
+    color: #172901;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 70px 70px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#noppakuvat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 2%;
+}
+
+#noppakuvat img {
+    width: 15%;
+}
+
+
+
+
+#tulosviesti {
+    font-size: 50px;
+    font-family: "Karla";
+    color: #172901;
+    margin-bottom: 3%;
+    font-weight: bold;
+    text-align: center;
+}
