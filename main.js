@@ -1,6 +1,7 @@
 let kaikkipelaajat = [];
 let pisteet = 0;
 let aktiivinenpelaaja = 0;
+let tupla = 0;
 
 function maara() {
     const pelaajienmaara = document.getElementById('pelaajienmaara').value;
@@ -16,7 +17,7 @@ function maara() {
         pelaajiennimet.appendChild(document.createElement('br'));
     }
 
-    document.getElementById('kaynnistapeli').style.display = 'block';
+    document.getElementById('kaynnistapeli').style.display = 'block';0
 }
 
 function kaynnistaPeli() {
@@ -41,11 +42,25 @@ function heitaNoppa() {
 
     document.getElementById('noppakuvat').innerHTML = `<img src="img/noppa${noppa1}.png" alt="noppa"> <img src="img/noppa${noppa2}.png" alt="noppa"> `;
  
-    if (noppa1 !== 1 && noppa2 !== 1) {
-        pisteet += (noppa1 + noppa2);
-    } else {
+    if (noppa1 === 1 && noppa2 === 1) {
+        pisteet += 25;
+        tupla = 0;
+    } else if (noppa1 === 1 || noppa2 === 1) {
         pisteet = 0;
+        tupla = 0;
         toinenPelaaja();
+    } else if (noppa1 === noppa2) {
+        pisteet += (noppa1 + noppa2) * 2;
+        tupla++;
+    
+            if(tupla === 3) {
+                pisteet = 0;
+                tupla = 0;
+                toinenPelaaja();
+            } 
+        } else {
+            pisteet += (noppa1 + noppa2);
+            tupla = 0;
     }
 
     paivitaPeli();
